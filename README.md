@@ -377,6 +377,10 @@ CalendarApplication/
 
 本项目配置了GitHub Pages网站，用于展示应用的功能和截图。
 
+### 网站地址
+
+ https://chen-kangkang.github.io/CalendarApplication/ 
+
 ### 网站内容
 
 - 项目介绍和功能特性
