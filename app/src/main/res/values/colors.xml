@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="select_orange">#FF8D1A</color>
+
+    <color name="orange">#FF9F43</color>
+    <color name="orange_light">#FFF5E6</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray">#E0E0E0</color>
+
+    <!-- 四象限背景色 -->
+    <color name="quadrant_1">#FFE6E6</color> <!-- 重要紧急（浅红） -->
+    <color name="quadrant_2">#FFF9E6</color> <!-- 重要不紧急（浅黄） -->
+    <color name="quadrant_3">#E6F7F0</color> <!-- 紧急不重要（浅绿） -->
+    <color name="quadrant_4">#E6F0FF</color> <!-- 不重要不紧急（浅蓝） -->
+
+    <!-- 四象限标题文字色 -->
+    <color name="quadrant_1_text">#FF4D4F</color>
+    <color name="quadrant_2_text">#FAAD14</color>
+    <color name="quadrant_3_text">#00B42A</color>
+    <color name="quadrant_4_text">#1890FF</color>
+
+    <color name="color_0">#F44336</color>
+    <color name="color_1">#E91E63</color>
+    <color name="color_2">#9C27B0</color>
+    <color name="color_3">#673AB7</color>
+    <color name="color_4">#3F51B5</color>
+    <color name="color_5">#2196F3</color>
+    <color name="color_6">#03A9F4</color>
+    <color name="color_7">#00BCD4</color>
+    <color name="color_8">#009688</color>
+    <color name="color_9">#4CAF50</color>
+
+    <!-- 日程颜色 -->
+    <color name="red">#F44336</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="green">#4CAF50</color>
+    <color name="blue">#2196F3</color>
+
+    <!--复选框颜色-->
+    <color name="edit_checkbox_urgent_important">#FF4444</color>
+    <color name="edit_checkbox_important">#FFC107</color>
+    <color name="edit_checkbox_urgent">#4CAF50</color>
+    <color name="edit_checkbox_not_urgent_important">#2196F3</color>
+
+    <!--登录注册页面-->
+    <!-- 顶部渐变颜色 -->
+    <color name="gradient_start">#FF9F43</color> <!-- 浅橙色 -->
+    <color name="gradient_end">#FFB347</color>   <!-- 深一点的橙色 -->
+    <!-- 按钮颜色 -->
+    <color name="button_orange">#FF9F43</color>
+    <!-- 输入框边框颜色 -->
+    <color name="input_border">#E0E0E0</color>
+    <!-- 文字颜色 -->
+    <color name="text_black">#000000</color>
+    <color name="text_gray">#9E9E9E</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_orange">#FF9F43</color>
+</resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- 顶部渐变背景区域 -->
+    <LinearLayout
+        android:id="@+id/top_gradient_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="@drawable/top_gradient_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="18dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您好"
+                android:textColor="@color/text_white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欢迎使用速写一日"
+                android:textColor="@color/text_white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 输入框 + 按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_marginTop="-30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rounded_white"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 手机号输入框 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="手机号"
+                android:textColor="@color/text_black"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/LoginInputStyle"
+                android:hint="请输入您的手机"
+                android:inputType="phone" />
+            
+            <TextView
+                android:id="@+id/tv_phone_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <!-- 密码输入框 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="密码"
+                android:textColor="@color/text_black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/LoginInputStyle"
+                android:hint="请输入您的密码"
+                android:inputType="textPassword" />
+            
+            <TextView
+                android:id="@+id/tv_password_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <!-- 登录/注册按钮 -->
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/LoginButtonStyle"
+                android:text="登录/注册" />
+
+            <!-- 用户协议和隐私政策 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:gravity="center">
+                    
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="登录即代表您已阅读并同意"
+                        android:textColor="@color/text_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="《用户协议》"
+                        android:textColor="@color/text_orange"
+                        android:textSize="12sp" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 《隐私政策》"
+                        android:textColor="@color/text_orange"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

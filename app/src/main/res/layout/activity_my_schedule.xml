@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true">
+
+    <!-- 顶部导航栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_top_nav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#ffffff"
+        android:elevation="2dp"
+        android:paddingHorizontal="16dp">
+
+        <!-- 返回按钮 -->
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:contentDescription="返回" />
+
+        <!-- 筛选条件按钮 -->
+        <RelativeLayout
+            android:id="@+id/rl_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/iv_dropdown"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_toRightOf="@+id/tv_filter"
+                android:layout_marginLeft="4dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_dropdown"
+                android:contentDescription="筛选" />
+        </RelativeLayout>
+
+        <!-- 搜索按钮 -->
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_search"
+            android:contentDescription="搜索" />
+    </RelativeLayout>
+
+    <!-- 筛选弹窗 -->
+    <RelativeLayout
+        android:id="@+id/rl_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#80000000">
+
+        <LinearLayout
+            android:id="@+id/ll_popup_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:elevation="4dp"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="全部"
+                android:textSize="16sp"
+                android:textColor="#FF6B35"
+                android:gravity="center"
+                android:background="@drawable/shape_select"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/tv_uncompleted"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="未完成"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:background="@drawable/shape_select"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/tv_completed"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="已完成"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:background="@drawable/shape_select"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/tv_overdue"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="已逾期"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:background="@drawable/shape_select"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 下拉刷新和列表容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top_nav"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_schedules"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:nestedScrollingEnabled="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:clipToPadding="false" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_load_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_load_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载更多..."
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

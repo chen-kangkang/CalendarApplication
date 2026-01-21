@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_popup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_select"
+    android:padding="10dp">
+
+    <!-- 全部 -->
+    <TextView
+        android:id="@+id/tv_all"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="全部"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_select_item" />
+
+    <!-- 未完成 -->
+    <TextView
+        android:id="@+id/tv_uncompleted"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="未完成"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_select_item" />
+
+    <!-- 已完成 -->
+    <TextView
+        android:id="@+id/tv_completed"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="已完成"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_select_item" />
+
+    <!-- 已逾期 -->
+    <TextView
+        android:id="@+id/tv_overdue"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="已逾期"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:background="@drawable/shape_select_item" />
+</LinearLayout>

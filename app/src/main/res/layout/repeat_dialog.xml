@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择重复方式"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_light"/>
+
+    <TextView
+        android:id="@+id/text_none"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="不重复"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <TextView
+        android:id="@+id/text_daily"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="每天"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <TextView
+        android:id="@+id/text_weekly"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="每周"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <TextView
+        android:id="@+id/text_monthly"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="每月"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_light"/>
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="取消"
+        android:textSize="16sp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/orange"/>
+
+</LinearLayout>

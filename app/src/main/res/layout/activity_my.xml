@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 可滚动内容区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <!-- 顶部橙色背景区域 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/orange">
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="-50dp"
+        android:orientation="vertical">
+        <!-- 圆形头像区域 -->
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_default_avatar"
+            android:contentDescription="用户头像"
+            android:background="@drawable/avatar_bg"
+            android:scaleType="centerCrop" />
+
+        <!-- 用户名区域 -->
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+
+    <!-- 功能选项列表 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <!-- 基本信息 -->
+        <RelativeLayout
+            android:id="@+id/rl_basic_info"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="16dp"
+            android:paddingHorizontal="16dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="基本信息"
+                android:textSize="16sp"
+                android:textColor="@color/text_black" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_arrow_right_2"
+                android:contentDescription="向右箭头" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@color/gray_light" />
+
+        <!-- 推送提醒 -->
+        <RelativeLayout
+            android:id="@+id/rl_push_notification"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="16dp"
+            android:paddingHorizontal="16dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推送提醒"
+                android:textSize="16sp"
+                android:textColor="@color/text_black" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_arrow_right_2"
+                android:contentDescription="向右箭头" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@color/gray_light" />
+
+        <!-- 我的日程 -->
+        <RelativeLayout
+            android:id="@+id/rl_my_schedules"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="16dp"
+            android:paddingHorizontal="16dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的日程"
+                android:textSize="16sp"
+                android:textColor="@color/text_black" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_arrow_right_2"
+                android:contentDescription="向右箭头" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!-- 登录/退出按钮 -->
+        <Button
+            android:id="@+id/btn_login_or_logout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="60dp"
+            android:text="点击登录"
+            android:textSize="16sp"
+            android:textColor="@color/text_white"
+            android:background="@drawable/button_gray_bg"
+            android:textStyle="bold" />
+    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部导航栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:id="@+id/ll_nav_schedule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_nav_schedule"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_nav_schedule_unselected"
+                android:contentDescription="日程" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日程"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_nav_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_nav_view"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_nav_view_unselected"
+                android:contentDescription="视图" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视图"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_nav_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_nav_mine"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_nav_mine_selected"
+                android:contentDescription="我的" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

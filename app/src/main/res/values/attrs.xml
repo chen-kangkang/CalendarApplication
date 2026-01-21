@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="QuadrantCheckBox">
+        <!-- 四象限类型属性（0-3） -->
+        <attr name="quadrantType" format="integer"/>
+    </declare-styleable>
+</resources>

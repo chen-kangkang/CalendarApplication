@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".ui.SearchActivity"
+    android:fitsSystemWindows="true">
+
+    <!-- 顶部导航栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp">
+
+        <!-- 搜索框 -->
+        <LinearLayout
+            android:id="@+id/ll_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/search_bar_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/ic_search" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="搜索日程"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 取消按钮 -->
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="取消"
+            android:textColor="@color/orange"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!-- 初始搜索提示 -->
+    <LinearLayout
+        android:id="@+id/ll_initial_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="在搜索框中搜索日程的名称"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- 搜索结果列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_search_results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:visibility="gone" />
+
+    <!-- 搜索结果为空提示 -->
+    <LinearLayout
+        android:id="@+id/ll_empty_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_empty_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="未找到相关日程"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

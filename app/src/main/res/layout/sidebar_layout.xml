@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- 顶部插画区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/gray_light"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_illustration"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <!-- 菜单列表 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <!-- 日历 -->
+
+        <TextView
+            android:id="@+id/tv_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:drawableStart="@drawable/ic_isdebar_calendar_wrap"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="日历"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_quadrant"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/orange_light"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/ic_isdebar_quadrant_wrap"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="四象限"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- 日视图 -->
+        <TextView
+            android:id="@+id/tv_day_view"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/ic_isdebar_day_wrap"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="日视图"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- 周视图 -->
+        <TextView
+            android:id="@+id/tv_week_view"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/ic_isdebar_week_wrap"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="周视图"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- 月视图 -->
+        <TextView
+            android:id="@+id/tv_month_view"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/ic_isdebar_month_wrap"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="月视图"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- 日程统计 -->
+        <TextView
+            android:id="@+id/tv_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/ic_statistics_wrap"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="日程统计"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- 全部日程 -->
+        <TextView
+            android:id="@+id/tv_all_schedules"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/ic_all_wrap"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="全部日程"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- 回收站 -->
+        <TextView
+            android:id="@+id/tv_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/ic_recycle_wrap"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="回收站"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <!-- 底部设置 -->
+    <TextView
+        android:id="@+id/tv_setting"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="24dp"
+        android:drawablePadding="16dp"
+        android:drawableStart="@drawable/ic_setting_wrap"
+        android:gravity="center_vertical"
+        android:paddingLeft="24dp"
+        android:text="设置"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CalendarApplication</string>
+    <string name="today_date">2025.10</string>
+    <string name="quadrant_1_title">Ⅰ 重要且紧急</string>
+    <string name="quadrant_2_title">Ⅱ 重要不紧急</string>
+    <string name="quadrant_3_title">Ⅲ 紧急不重要</string>
+    <string name="quadrant_4_title">Ⅳ 不重要不紧急</string>
+    
+    <!-- 权限对话框字符串 -->
+    <string name="permission_dialog_title">权限申请</string>
+    <string name="exact_alarm_permission_message">为了确保您能准时收到日程提醒，我们需要获取精确闹钟权限。请在设置中开启此权限。</string>
+    <string name="notification_permission_message">为了向您发送日程提醒通知，我们需要获取通知权限。请在设置中开启此权限。</string>
+    <string name="background_permission_message">为了确保您在应用后台也能收到日程提醒，我们需要获取后台运行权限。请在设置中开启此权限。</string>
+    <string name="permission_dialog_go_to_settings">去设置</string>
+    <string name="permission_dialog_cancel">取消</string>
+    
+    <!-- 通知字符串 -->
+    <string name="notification_channel_name">日程提醒</string>
+    <string name="notification_channel_description">接收日程提醒通知</string>
+    <string name="notification_title">日程提醒</string>
+    <string name="notification_later">稍后提醒</string>
+    <string name="notification_complete">标记已完成</string>
+</resources>

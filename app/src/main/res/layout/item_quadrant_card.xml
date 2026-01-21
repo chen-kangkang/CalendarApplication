@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_quadrant_1"
+    android:radius="8dp">
+
+    <!-- 四象限标题 -->
+    <TextView
+        android:id="@+id/tv_quadrant_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:text="@string/quadrant_1_title"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/quadrant_1_text"
+        android:visibility="visible"/>
+
+    <!-- 日程列表容器，添加ScrollView支持内部滚动 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+        <LinearLayout
+            android:id="@+id/ll_schedules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+        <!-- 日程项会动态添加 -->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

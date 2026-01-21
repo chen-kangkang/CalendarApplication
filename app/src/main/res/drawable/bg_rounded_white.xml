@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 白色背景 -->
+    <solid android:color="@android:color/white" />
+    <!-- 圆角大小 -->
+    <corners android:radius="12dp" />
+    <!-- 可选：添加轻微阴影（如果需要），也可以用elevation配合 -->
+    <stroke
+        android:width="0dp"
+        android:color="@android:color/transparent" />
+</shape>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 定义图层的大小（强制生效） -->
+    <item
+        android:width="@dimen/menu_icon_size"
+        android:height="@dimen/menu_icon_size"
+        android:gravity="center"> <!-- 图标居中显示 -->
+        <!-- 引用原图标资源 -->
+        <bitmap android:src="@drawable/ic_nav_schedule" />
+    </item>
+</layer-list>

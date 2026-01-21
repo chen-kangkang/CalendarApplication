@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除重复日程"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请选择删除方式："
+        android:textSize="14sp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_light"
+        android:layout_marginTop="8dp"/>
+
+    <ListView
+        android:id="@+id/lv_delete_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_light"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="取消"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@android:color/darker_gray"/>
+
+</LinearLayout>

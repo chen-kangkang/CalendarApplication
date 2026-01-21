@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="view_types">
+        <item>周视图</item>
+        <item>月视图</item>
+    </string-array>
+</resources>
