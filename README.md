@@ -240,36 +240,44 @@ CalendarApplication/
 
 ## 📊 数据库设计
 
-### 用户表（users）
+### 用户表（user）
 
 | 字段名 | 类型 | 说明 |
 |--------|------|------|
-| id | INTEGER | 主键，自增 |
-| phone | TEXT | 手机号（唯一） |
-| password | TEXT | 加密后的密码 |
-| salt | TEXT | 盐值 |
-| nickname | TEXT | 昵称 |
-| gender | INTEGER | 性别（0未知/1男/2女） |
-| age | INTEGER | 年龄 |
-| created_at | TEXT | 创建时间 |
+| _id | INTEGER | 主键，自增 |
+| phone | TEXT | 手机号（唯一，非空） |
+| password | TEXT | 加密后的密码（非空） |
+| salt | TEXT | 盐值（非空） |
+| nickname | TEXT | 昵称（默认："我是一个用户昵称"） |
+| avatar | TEXT | 头像URL（默认：空字符串） |
+| gender | TEXT | 性别（默认：空字符串） |
+| age | INTEGER | 年龄（默认：0） |
 
-### 日程表（schedules）
+### 日程表（schedule）
 
 | 字段名 | 类型 | 说明 |
 |--------|------|------|
-| id | INTEGER | 主键，自增 |
-| user_id | INTEGER | 用户ID（外键） |
+| _id | INTEGER | 主键，自增 |
+| date | TEXT | 日期（格式：yyyy-MM-dd） |
 | title | TEXT | 日程标题 |
-| description | TEXT | 日程描述 |
-| start_time | TEXT | 开始时间 |
-| end_time | TEXT | 结束时间 |
-| quadrant | INTEGER | 四象限（1-4） |
-| color | INTEGER | 颜色（0-9） |
-| reminder | INTEGER | 提前提醒时间（分钟） |
-| repeat_type | TEXT | 重复类型（NONE/DAILY/WEEKLY/MONTHLY） |
+| time | TEXT | 时间（格式：HH:mm-HH:mm） |
 | completed | INTEGER | 完成状态（0未完成/1已完成） |
-| created_at | TEXT | 创建时间 |
-| updated_at | TEXT | 更新时间 |
+| quadrant | INTEGER | 四象限（0红/1黄/2绿/3蓝） |
+| remark | TEXT | 备注内容 |
+| color | INTEGER | 事项颜色（默认：0） |
+| duration | INTEGER | 持续时间（默认：1） |
+| reminder | TEXT | 提醒时间 |
+| repeat_type | TEXT | 重复类型（默认：NONE） |
+| user_id | INTEGER | 用户ID（外键，非空） |
+
+### 四象限说明
+
+| 数值 | 颜色 | 象限 | 说明 |
+|------|------|------|------|
+| 0 | 红色 | 第一象限 | 重要且紧急 |
+| 1 | 黄色 | 第二象限 | 重要不紧急 |
+| 2 | 绿色 | 第三象限 | 紧急不重要 |
+| 3 | 蓝色 | 第四象限 | 不紧急不重要 |
 
 ## 🎨 设计理念
 
