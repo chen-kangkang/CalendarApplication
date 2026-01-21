@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>速写一日-日程管理App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .screenshot {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .screenshot p {
+            margin-top: 15px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .tech-stack h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .links a:hover {
+            opacity: 0.8;
+        }
+
+        .badge {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>速写一日</h1>
+            <p class="tagline">高效管理你的时间，让每一天都充实而有意义</p>
+            <div style="margin-top: 20px;">
+                <span class="badge">Android</span>
+                <span class="badge">Java</span>
+                <span class="badge">开源</span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <section class="features">
+                <div class="feature">
+                    <h3>✅ 四象限管理</h3>
+                    <p>按重要性和紧急性分类，帮助你优先处理重要事项，提高工作效率</p>
+                </div>
+                <div class="feature">
+                    <h3>📅 多视图展示</h3>
+                    <p>支持日视图、周视图、月视图，全方位了解你的日程安排</p>
+                </div>
+                <div class="feature">
+                    <h3>🔔 智能提醒</h3>
+                    <p>自定义提醒时间，重要事项绝不遗漏，支持开机自启</p>
+                </div>
+                <div class="feature">
+                    <h3>🔄 重复日程</h3>
+                    <p>支持每日、每周、每月重复，轻松管理周期性事务</p>
+                </div>
+                <div class="feature">
+                    <h3>🔍 快速搜索</h3>
+                    <p>按标题和内容搜索，快速找到需要的日程</p>
+                </div>
+                <div class="feature">
+                    <h3>🎨 多彩标记</h3>
+                    <p>10种颜色可选，让你的日程更加生动有趣</p>
+                </div>
+            </section>
+
+            <section class="download-section">
+                <h2>⬇️ 立即下载体验</h2>
+                <p style="margin: 20px 0; font-size: 1.1em;">支持 Android 6.0 及以上版本</p>
+                <a href="https://github.com/chen-kangkang/CalendarApplication/releases" class="btn">📥 下载最新版本</a>
+            </section>
+
+            <section class="screenshots-section">
+                <h2 style="text-align: center; color: #667eea; margin-bottom: 30px;">📸 界面预览</h2>
+                <div class="screenshots">
+                    <div class="screenshot">
+                        <img src="assets/images/screenshots/main_activity.png" alt="主界面" style="width: 100%;">
+                        <p>四象限视图</p>
+                    </div>
+                    <div class="screenshot">
+                        <img src="assets/images/screenshots/day_view.png" alt="日视图" style="width: 100%;">
+                        <p>日视图</p>
+                    </div>
+                    <div class="screenshot">
+                        <img src="assets/images/screenshots/week_view.png" alt="周视图" style="width: 100%;">
+                        <p>周视图</p>
+                    </div>
+                    <div class="screenshot">
+                        <img src="assets/images/screenshots/month_view.png" alt="月视图" style="width: 100%;">
+                        <p>月视图</p>
+                    </div>
+                    <div class="screenshot">
+                        <img src="assets/images/screenshots/login_activity.png" alt="登录注册" style="width: 100%;">
+                        <p>登录注册</p>
+                    </div>
+                    <div class="screenshot">
+                        <img src="assets/images/screenshots/add_schedule.png" alt="添加日程" style="width: 100%;">
+                        <p>添加日程</p>
+                    </div>
+                    <div class="screenshot">
+                        <img src="assets/images/screenshots/edit_schedule.png" alt="编辑日程" style="width: 100%;">
+                        <p>编辑日程</p>
+                    </div>
+                    <div class="screenshot">
+                        <img src="assets/images/screenshots/my_activity.png" alt="个人中心" style="width: 100%;">
+                        <p>个人中心</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tech-stack">
+                <h3>🛠️ 技术栈</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">Android SDK</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">Material Design</span>
+                    <span class="tech-tag">Gradle</span>
+                    <span class="tech-tag">AlarmManager</span>
+                    <span class="tech-tag">BroadcastReceiver</span>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>© 2026 速写一日. 使用 MIT 许可证.</p>
+            <div class="links">
+                <a href="https://github.com/chen-kangkang/CalendarApplication">GitHub</a>
+                <a href="https://github.com/chen-kangkang/CalendarApplication/blob/main/README.md">文档</a>
+                <a href="https://github.com/chen-kangkang/CalendarApplication/issues">问题反馈</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
